@@ -1,3 +1,6 @@
+const sprites = new Image();
+sprites.src = "./snake-graphics.png";
+
 let canvas = document.getElementById("snake"); //criar elemento que irá rodar o jogo
 let context = canvas.getContext("2d"); //....
 let box = 32;
@@ -25,8 +28,16 @@ function criarCobrinha (){
 }
 
 function drawFood (){
-    context.fillStyle = "red";
-    context.fillRect(food.x, food.y, box, box);
+    //context.fillStyle = "red";
+    //context.fillRect(food.x, food.y, box, box);
+
+    context.drawImage(
+        sprites,           //spritesheet
+        0, 192,            // x = 0 y = 192 (64+64+64) posição inicial do recorte
+        64, 64,            // tamanho do recorte no nosso spritesheet
+        food.x, food.y,    //posição da comida
+        box,box            // tamanho da comida
+      );
 }
 
 //quando um evento acontece, detecta e chama uma função
