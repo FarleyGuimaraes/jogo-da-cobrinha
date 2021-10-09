@@ -164,11 +164,31 @@ function update(event){
 
 function iniciarJogo(){    
 
-    if(snake[0].x > 15*box && snake[0].direction.x == 1) snake[0].x = 0;
-    if(snake[0].x < 0 && snake[0].direction.x == -1) snake[0].x = 16 * box;
-    if(snake[0].y > 15*box && snake[0].direction.y == 1) snake[0].y = 0;
-    if(snake[0].y < 0 && snake[0].direction.y == -1) snake[0].y = 16 * box;
+    //if(snake[0].x > 15*box && snake[0].direction.x == 1) snake[0].x = 0;
+    //if(snake[0].x < 0 && snake[0].direction.x == -1) snake[0].x = 16 * box;
     
+    //if(snake[0].y > 15*box && snake[0].direction.y == 1) snake[0].y = 0;
+    //if(snake[0].y < 0 && snake[0].direction.y == -1) snake[0].y = 16 * box;
+    
+    //--------------------------------------------------------------
+    if(snake[0].x > 15 * box && snake[0].direction.x == 1) snake[0].x = 0
+    if(snake[0].x > 15 * box && snake[0].direction.y == -1) snake[0].x = 0
+    if(snake[0].x > 15 * box && snake[0].direction.y == 1) snake[0].x = 0
+
+    if(snake[0].x < 0  && snake[0].direction.x == -1) snake[0].x = 15 * box
+    if(snake[0].x < 0  && snake[0].direction.y == -1) snake[0].x = 15 * box
+    if(snake[0].x < 0  && snake[0].direction.y == 1) snake[0].x = 15 * box
+
+    if(snake[0].y > 15 * box && snake[0].direction.y == 1) snake[0].y = 0
+    if(snake[0].y > 15 * box && snake[0].direction.x == 1) snake[0].y = 0
+    if(snake[0].y > 15 * box && snake[0].direction.x == -1) snake[0].y = 0
+
+    if(snake[0].y < 0 && snake[0].direction.y == -1) snake[0].y = 15 * box
+    if(snake[0].y < 0 && snake[0].direction.x == 1) snake[0].y = 15 * box
+    if(snake[0].y < 0 && snake[0].direction.x == -1) snake[0].y = 15 * box
+
+
+
     for(i = 1; i < snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             //clearInterval(jogo);
