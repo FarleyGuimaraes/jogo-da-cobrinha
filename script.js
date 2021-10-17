@@ -1,5 +1,6 @@
 let score = document.querySelector('#score');
 var audio = document.createElement("audio");
+let record = document.querySelector('#record');
 
 const sprites = new Image();
 sprites.src = "./img/snake-graphics.png";
@@ -133,7 +134,15 @@ function criarCobrinha (){
 }
 
 function pontuou() {
-    score.innerText = snake.length.toLocaleString('pt-BR', {minimumIntegerDigits: 3, useGrouping:false});
+    
+    score.innerText = snake.length.toLocaleString('pt-BR', {minimumIntegerDigits: 3, useGrouping:false});;
+    let pontuacao = Number(score.innerText);
+
+    if(pontuacao > Number(localStorage.getItem('record'))){
+        localStorage.setItem('record', pontuacao);
+        record.innerText = pontuacao.toLocaleString('pt-BR',{minimumIntegerDigits: 3, useGrouping:false});
+    }
+    
 }
 
 function drawFood (){
@@ -163,6 +172,8 @@ function update(event){
 }
 
 function iniciarJogo(){    
+
+    record.innerText = Number(localStorage.getItem('record')).toLocaleString('pt-BR',{minimumIntegerDigits: 3, useGrouping:false});
 
     //if(snake[0].x > 15*box && snake[0].direction.x == 1) snake[0].x = 0;
     //if(snake[0].x < 0 && snake[0].direction.x == -1) snake[0].x = 16 * box;
