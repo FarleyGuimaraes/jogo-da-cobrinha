@@ -12,7 +12,7 @@ Disponível em: [Jogo da Cobrinha](https://farleyguimaraes.github.io/jogo-da-cob
 
 
 
-### Projeto Base
+## Projeto Base
 
 Projeto disponibilizado pela instrutora do bootcamp
 
@@ -24,7 +24,7 @@ Projeto disponibilizado pela instrutora do bootcamp
 
 
 
-### Alterações no projeto base
+## Alterações no projeto base
 
 - Adicionar efeito sonoro ao comer a fruta
 
@@ -41,4 +41,5 @@ Projeto disponibilizado pela instrutora do bootcamp
     Link do tutorial : [colocando-sprites-no-jogo-da-cobrinha](https://digitalinnovation.one/artigos/colocando-sprites-no-jogo-da-cobrinha)
 
 - Tela de fim de jogo
-  - Com base no projeto do [Leonardo Almeida][https://github.com/LeonardoVita/javascript-snake-game]
+  - Com base no projeto do Leonardo Almeida. Disponível em: [javascript-snake-game](https://github.com/LeonardoVita/javascript-snake-game)
+
